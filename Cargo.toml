@@ -1,0 +1,17 @@
+[package]
+name = "pegasus"
+version = "0.1.0"
+edition = "2024"
+categories = ["malware","rust","windows","unsafe","security"]
+keywords = ["malware","security"]
+description = "Windows centered security tool"
+license = "AGPLv3"
+
+[dependencies]
+anyhow = "1.0.104"
+tokio = { version = "1.54.1", features = ["full"] }
+windows = { version = "0.62.2", features = [
+    "Win32_System_SystemInformation", 
+    "Win32_System_WindowsProgramming", 
+    "Win32_Foundation",
+] }
